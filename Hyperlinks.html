@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlinks in HTML</title>
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+            color: #23313b;
+            background-color: #f3f6f4;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #145b50;
+        }
+        section {
+            margin: 24px 0;
+            padding: 18px 22px;
+            background-color: #ffffff;
+            border-left: 4px solid #e38b4e;
+        }
+        code, pre {
+            color: #173c36;
+            background-color: #e8f0ed;
+            font-family: Consolas, monospace;
+        }
+        code {
+            padding: 2px 5px;
+        }
+        pre {
+            overflow-x: auto;
+            padding: 12px;
+        }
+        a {
+            color: #075f9b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hyperlinks in HTML</h1>
+        <p>Hyperlinks connect one page or resource to another. They are created with the anchor element, written as <code>&lt;a&gt;</code>.</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="syntax-title">
+            <h2 id="syntax-title">Anchor Tag and Syntax</h2>
+            <p>The <code>href</code> attribute tells the browser where the link goes. The text between the opening and closing tags is the clickable link text.</p>
+            <pre><code>&lt;a href="destination"&gt;Clickable link text&lt;/a&gt;</code></pre>
+            <p>For example: <a href="https://www.example.com">Visit Example.com</a></p>
+        </section>
+
+        <section aria-labelledby="attributes-title">
+            <h2 id="attributes-title">Important Parts</h2>
+            <dl>
+                <dt><code>&lt;a&gt;</code></dt>
+                <dd>The anchor tag creates a hyperlink.</dd>
+                <dt><code>href</code></dt>
+                <dd>The destination URL, file path, or page location.</dd>
+                <dt>Link text</dt>
+                <dd>The readable content between <code>&lt;a&gt;</code> and <code>&lt;/a&gt;</code>. Use text that makes the destination clear.</dd>
+                <dt><code>target="_blank"</code></dt>
+                <dd>Opens the destination in a new tab or window.</dd>
+                <dt><code>rel="noopener noreferrer"</code></dt>
+                <dd>Recommended with <code>target="_blank"</code> to prevent the new page from controlling the page that opened it and to avoid sending referrer information.</dd>
+            </dl>
+            <pre><code>&lt;a href="https://www.example.com" target="_blank" rel="noopener noreferrer"&gt;
+    Open Example.com in a new tab
+&lt;/a&gt;</code></pre>
+            <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Open Example.com in a new tab</a></p>
+        </section>
+
+        <section aria-labelledby="link-types-title">
+            <h2 id="link-types-title">Common Types of Links</h2>
+            <h3>Link to another website</h3>
+            <p>Use the complete URL, including <code>https://</code>.</p>
+            <pre><code>&lt;a href="https://www.example.com"&gt;Example website&lt;/a&gt;</code></pre>
+            <p><a href="https://www.example.com">Go to Example.com</a></p>
+
+            <h3>Link to another file in this folder</h3>
+            <p>A relative path points to a file based on the current document's location.</p>
+            <pre><code>&lt;a href="Lists.html"&gt;Open the lists lesson&lt;/a&gt;</code></pre>
+            <p><a href="Lists.html">Open the lists lesson</a></p>
+
+            <h3>Link to a section on the same page</h3>
+            <p>Give the destination element an <code>id</code>, then use that ID with <code>#</code> in the link.</p>
+            <pre><code>&lt;a href="#contact-info"&gt;Jump to contact information&lt;/a&gt;
+...
+&lt;h3 id="contact-info"&gt;Contact Information&lt;/h3&gt;</code></pre>
+            <p><a href="#contact-info">Jump to contact information</a></p>
+
+            <h3>Email and telephone links</h3>
+            <p>Use <code>mailto:</code> for email and <code>tel:</code> for telephone links.</p>
+            <pre><code>&lt;a href="mailto:hello@example.com"&gt;Send an email&lt;/a&gt;
+&lt;a href="tel:+15551234567"&gt;Call us&lt;/a&gt;</code></pre>
+            <p><a href="mailto:hello@example.com">Send an email</a> | <a href="tel:+15551234567">Call +1 555 123 4567</a></p>
+        </section>
+
+        <section id="contact-info" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Information</h2>
+            <p>This is the section reached by the same-page link above. A fragment link uses the destination element's ID, such as <code>#contact-info</code>.</p>
+            <p><a href="#syntax-title">Back to the syntax section</a></p>
+        </section>
+    </main>
+</body>
+</html>
