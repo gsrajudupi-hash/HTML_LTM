@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors: Tag, Class, and ID</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 760px;
+            padding: 24px;
+            color: #263238;
+            background-color: #f4f7f6;
+        }
+
+        #main-title {
+            color: #145c52;
+            text-align: center;
+        }
+
+        p {
+            padding: 12px;
+            background-color: #e5eeee;
+            border-left: 4px solid #78909c;
+        }
+
+        .highlight {
+            color: #7a3e00;
+            background-color: #fff0c2;
+            border-left-color: #e59a24;
+        }
+
+        .example {
+            margin: 24px 0;
+            padding: 16px;
+            background-color: #ffffff;
+            border: 1px solid #d5dfdc;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            color: #145c52;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">CSS Selectors</h1>
+    <p>Selectors tell CSS which HTML elements to style.</p>
+
+    <section class="example">
+        <h2>1. Tag selector</h2>
+        <p>The <code>p</code> selector styles every paragraph on this page.</p>
+        <p>Both of these paragraphs get the same basic style.</p>
+        <code>p { color: ...; }</code>
+    </section>
+
+    <section class="example">
+        <h2>2. Class selector</h2>
+        <p class="highlight">This paragraph has the highlight class.</p>
+        <p class="highlight">Another element can reuse the same class.</p>
+        <code>.highlight { color: ...; }</code>
+    </section>
+
+    <section class="example">
+        <h2>3. ID selector</h2>
+        <p>The page title has the unique ID <code>main-title</code>.</p>
+        <code>#main-title { color: ...; }</code>
+    </section>
+</body>
+</html>
