@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullets and Numbering</title>
+    <link rel="stylesheet" href="styles/heading.css">
+</head>
+<body>
+    <h1>Bullets and Numbering</h1>
+
+    <h2>Bulleted List: Unordered List</h2>
+    <p>Use the <code>&lt;ul&gt;</code> tag when the order of the items does not matter.</p>
+    <ul>
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Oranges</li>
+    </ul>
+
+    <h2>Numbered List: Ordered List</h2>
+    <p>Use the <code>&lt;ol&gt;</code> tag when items should appear in a particular order.</p>
+    <ol>
+        <li>Gather the ingredients</li>
+        <li>Mix them together</li>
+        <li>Bake until ready</li>
+    </ol>
+
+    <h2>Different Bullet Styles</h2>
+    <p>Use the CSS <code>list-style-type</code> property to change unordered-list bullets.</p>
+    <h3>Circle Bullets</h3>
+    <ul style="list-style-type: circle;">
+        <li>Circle marker</li>
+        <li>Another item</li>
+    </ul>
+    <h3>Square Bullets</h3>
+    <ul style="list-style-type: square;">
+        <li>Square marker</li>
+        <li>Another item</li>
+    </ul>
+
+    <h2>Different Numbering Styles</h2>
+    <p>Use the <code>type</code> attribute on an ordered list to choose its numbering style.</p>
+    <h3>Letters</h3>
+    <ol type="A">
+        <li>First item</li>
+        <li>Second item</li>
+    </ol>
+    <ol type="a">
+        <li>First item</li>
+        <li>Second item</li>
+    </ol>
+    <h3>Roman Numerals</h3>
+    <ol type="I">
+        <li>First item</li>
+        <li>Second item</li>
+    </ol>
+    <ol type="i">
+        <li>First item</li>
+        <li>Second item</li>
+    </ol>
+
+    <h2>Nested Lists</h2>
+    <p>Put one list inside a list item to create a list within a list.</p>
+    <ul>
+        <li>Fruit
+            <ul>
+                <li>Apples</li>
+                <li>Oranges</li>
+            </ul>
+        </li>
+        <li>Vegetables
+            <ul>
+                <li>Carrots</li>
+                <li>Spinach</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Definition List</h2>
+    <p>Use <code>&lt;dl&gt;</code> for a list of terms, <code>&lt;dt&gt;</code> for each term, and <code>&lt;dd&gt;</code> for its description.</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>The markup language used to structure web content.</dd>
+        <dt>CSS</dt>
+        <dd>The style sheet language used to format web pages.</dd>
+    </dl>
+</body>
+</html>
