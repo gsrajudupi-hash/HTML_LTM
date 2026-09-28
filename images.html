@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Image Elements</title>
+    <link rel="stylesheet" href="styles/images.css">
+</head>
+<body>
+    <main class="lesson">
+        <header class="page-header">
+            <p class="eyebrow">HTML5 lesson</p>
+            <h1>Images on the Web</h1>
+            <p class="intro">Add images with meaningful alternatives, responsive sources, and interactive image regions.</p>
+        </header>
+
+        <section aria-labelledby="basic-heading">
+            <h2 id="basic-heading">A standard image</h2>
+            <figure class="photo-feature">
+                <img
+                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=85"
+                    alt="A mountain lake reflecting the surrounding peaks beneath a cloudy sky"
+                    width="1400"
+                    height="900"
+                    fetchpriority="high"
+                    decoding="async">
+                <figcaption><code>&lt;img&gt;</code> displays an image. Its <code>alt</code> text describes the image for people using assistive technology or when the image cannot load.</figcaption>
+            </figure>
+        </section>
+
+        <section aria-labelledby="responsive-heading">
+            <h2 id="responsive-heading">A responsive image</h2>
+            <figure class="photo-feature">
+                <picture>
+                    <source
+                        media="(min-width: 760px)"
+                        srcset="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=760&q=80"
+                        alt="A winding trail through a sunlit green valley"
+                        width="1400"
+                        height="900"
+                        loading="lazy"
+                        decoding="async">
+                </picture>
+                <figcaption><code>&lt;picture&gt;</code> groups image options. The browser checks each <code>&lt;source&gt;</code> and uses the nested <code>&lt;img&gt;</code> as the fallback.</figcaption>
+            </figure>
+        </section>
+
+        <section aria-labelledby="map-heading">
+            <h2 id="map-heading">Clickable image regions</h2>
+            <p class="section-intro">An image map connects areas of one image to different destinations. Select either half of the landscape.</p>
+            <figure class="photo-feature map-feature">
+                <img
+                    src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+                    alt="Mountain landscape image map: select the left side for the lake or the right side for the mountain"
+                    width="1000"
+                    height="650"
+                    usemap="#landscape-map"
+                    loading="lazy"
+                    decoding="async">
+                <map name="landscape-map">
+                    <area shape="rect" coords="0,0,500,650" href="#lake" alt="Learn about the lake">
+                    <area shape="rect" coords="500,0,1000,650" href="#mountain" alt="Learn about the mountain">
+                </map>
+                <figcaption><code>&lt;map&gt;</code> names the image map; each <code>&lt;area&gt;</code> defines a clickable region with its own destination and alternative text.</figcaption>
+            </figure>
+            <div class="destination-notes">
+                <p id="lake"><strong>Lake:</strong> the left region links here.</p>
+                <p id="mountain"><strong>Mountain:</strong> the right region links here.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

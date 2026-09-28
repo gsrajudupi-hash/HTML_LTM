@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Tags</title>
+    <link rel="stylesheet" href="styles/tables.css">
+</head>
+<body>
+    <main class="lesson">
+        <header class="page-header">
+            <p class="eyebrow">HTML5 lesson</p>
+            <h1>Working with Tables</h1>
+            <p class="intro">A trainee score report demonstrating the main HTML table elements.</p>
+        </header>
+
+        <section aria-labelledby="scores-heading">
+            <h2 id="scores-heading">Trainee Assessment Scores</h2>
+            <div class="table-wrap">
+                <table>
+                    <caption>Assessment results for the September training group</caption>
+                    <colgroup>
+                        <col class="group-column">
+                        <col class="name-column">
+                        <col class="score-column" span="2">
+                        <col class="grade-column">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" rowspan="2">Group</th>
+                            <th scope="col" rowspan="2">Trainee</th>
+                            <th scope="colgroup" colspan="2">Assessment score</th>
+                            <th scope="col" rowspan="2">Final grade</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Quiz</th>
+                            <th scope="col">Project</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="rowgroup" rowspan="2">Morning</th>
+                            <th scope="row">Asha Patel</th>
+                            <td>88%</td>
+                            <td>94%</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Noah Kim</th>
+                            <td>76%</td>
+                            <td>85%</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup" rowspan="2">Afternoon</th>
+                            <th scope="row">Mia Chen</th>
+                            <td>91%</td>
+                            <td>89%</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Leo Martin</th>
+                            <td>82%</td>
+                            <td>78%</td>
+                            <td>B</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="2">Group average</th>
+                            <td>84%</td>
+                            <td>87%</td>
+                            <td>B+</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <aside class="tag-key" aria-label="Table elements demonstrated">
+            <h2>Elements in this example</h2>
+            <p><code>&lt;table&gt;</code> holds the data; <code>&lt;caption&gt;</code> names it; <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code> identify columns.</p>
+            <p><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> divide the table into sections. <code>&lt;tr&gt;</code> creates a row, <code>&lt;th&gt;</code> marks a heading, and <code>&lt;td&gt;</code> holds a data cell.</p>
+            <p>The <code>rowspan</code> and <code>colspan</code> attributes let cells span multiple rows or columns.</p>
+        </aside>
+    </main>
+</body>
+</html>
