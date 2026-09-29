@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Palace Hotel</title>
+    <link rel="stylesheet" href="/styles/hotel.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Grand Palace Hotel</h1>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <h2 id="hero-title">Luxury Stay For Your Perfect Vacation</h2>
+            <p>Experience world-class hospitality and comfort.</p>
+            <a href="#rooms" class="btn">Book Now</a>
+        </section>
+
+        <section class="search-section" aria-labelledby="search-title">
+            <h2 id="search-title">Search Available Rooms</h2>
+            <form class="search-form" action="#rooms" method="get">
+                <input type="date" name="check-in" aria-label="Check-in date" required>
+                <input type="date" name="check-out" aria-label="Check-out date" required>
+                <input type="number" name="guests" min="1" placeholder="Guests" aria-label="Number of guests">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="rooms" id="rooms" aria-labelledby="rooms-title">
+            <h2 id="rooms-title">Available Rooms</h2>
+            <div class="room-grid">
+                <article class="room-card">
+                    <img src="https://picsum.photos/400/250?random=1" alt="Deluxe hotel room with a king-size bed">
+                    <h3>Deluxe Room</h3>
+                    <p>King Size Bed</p>
+                    <p class="price">₹4,999 / Night</p>
+                    <button type="button">Reserve Now</button>
+                </article>
+
+                <article class="room-card">
+                    <img src="https://picsum.photos/400/250?random=2" alt="Spacious luxury hotel suite">
+                    <h3>Suite Room</h3>
+                    <p>Luxury Suite</p>
+                    <p class="price">₹7,999 / Night</p>
+                    <button type="button">Reserve Now</button>
+                </article>
+
+                <article class="room-card">
+                    <img src="https://picsum.photos/400/250?random=3" alt="Comfortable family hotel room">
+                    <h3>Family Room</h3>
+                    <p>Perfect For Families</p>
+                    <p class="price">₹6,499 / Night</p>
+                    <button type="button">Reserve Now</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="facilities" id="facilities" aria-labelledby="facilities-title">
+            <h2 id="facilities-title">Hotel Facilities</h2>
+            <div class="facility-container">
+                <div class="facility">Swimming Pool</div>
+                <div class="facility">Spa &amp; Wellness</div>
+                <div class="facility">Free WiFi</div>
+                <div class="facility">Restaurant</div>
+                <div class="facility">Gym</div>
+                <div class="facility">Parking</div>
+            </div>
+        </section>
+
+        <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+            <h2 id="reviews-title">Customer Reviews</h2>
+            <div class="review-container">
+                <article class="review-card">
+                    <p>"Excellent hospitality and amazing service."</p>
+                    <h3>- Rahul Sharma</h3>
+                </article>
+                <article class="review-card">
+                    <p>"Beautiful rooms and delicious food."</p>
+                    <h3>- Priya Patel</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Us</h2>
+            <p>Email: info@grandpalace.com</p>
+            <p>Phone: +91 9876543210</p>
+            <p>Address: Beach Road, Goa, India</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Grand Palace Hotel. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
